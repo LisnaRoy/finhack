@@ -43,4 +43,4 @@ tx_data.head(10)
 tx_data['InvoiceDate'] = pd.to_datetime(tx_data['InvoiceDate'])
 
 #create dataframe with uk data only
-tx_uk = tx_data.query("Country=='United Kingdom'").reset_index(drop=True)
+tx_uk = tx_data.query("Country=='india'").reset_index(drop=True)

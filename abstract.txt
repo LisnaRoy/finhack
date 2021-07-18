@@ -1,4 +1,4 @@
-Payment Management Solution for predicting the next purchase day
+Payment Management Solution for predicting the next purchase day by Python and Pandas (a famous library that we will use on everything) here
 
 Predictive analytics helps us a lot in  handling payment deadlines, offers, . One of the many opportunities it can provide is predicting the next purchase day of the customer. 
 We can build our strategy with  tactical actions like:

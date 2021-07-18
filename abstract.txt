@@ -1,6 +1,6 @@
 Predictive analytics helps us a lot on this one. One of the many opportunities it can provide is predicting the next purchase day of the customer. 
 We can build our strategy with  tactical actions like:
--No promotional offer to this customer since s/he will make a purchase anyways
+-No promotional offer to this customer since she/he will make a purchase anyways
 -Nudge the customer with inbound marketing if there is no purchase in the predicted time window
 
 For this project, we have selected our feature candidates like below:

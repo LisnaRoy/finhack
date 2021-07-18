@@ -1,4 +1,7 @@
-Predictive analytics helps us a lot on this one. One of the many opportunities it can provide is predicting the next purchase day of the customer. 
+Payment Management Solution for predicting the next purchase day
+
+
+Predictive analytics helps us a lot in  handling payment deadlines, offers, . One of the many opportunities it can provide is predicting the next purchase day of the customer. 
 We can build our strategy with  tactical actions like:
 -No promotional offer to this customer since she/he will make a purchase anyways
 -Nudge the customer with inbound marketing if there is no purchase in the predicted time window

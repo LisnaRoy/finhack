@@ -1,10 +1,12 @@
 Payment Management Solution for predicting the next purchase day
 
-
 Predictive analytics helps us a lot in  handling payment deadlines, offers, . One of the many opportunities it can provide is predicting the next purchase day of the customer. 
 We can build our strategy with  tactical actions like:
 -No promotional offer to this customer since she/he will make a purchase anyways
 -Nudge the customer with inbound marketing if there is no purchase in the predicted time window
+
+starts with importing our data and do the preliminary data work:Data Wrangling
+importing the CSV file, converted the date field from string to DateTime to make it workable and filtered out countries other than the india.We use six months of behavioral data to predict customers’ first purchase date in the next three months. If there is no purchase, we will predict that too.
 
 For this project, we have selected our feature candidates like below:
 RFM scores & clusters

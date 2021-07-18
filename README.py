@@ -43,4 +43,27 @@ tx_data.head(10)
 tx_data['InvoiceDate'] = pd.to_datetime(tx_data['InvoiceDate'])
 
 #create dataframe with indian data only
-tx_uk = tx_data.query("Country=='india'").reset_index(drop=True)
+tx_india = tx_data.query("Country=='india'").reset_index(drop=True)
+
+#create a dataframe with customer id and first purchase date in tx_next
+tx_next_first_purchase = tx_next.groupby('CustomerID').InvoiceDate.min().reset_index()
+tx_next_first_purchase.columns = ['CustomerID','MinPurchaseDate']
+
+#create a dataframe with customer id and last purchase date in tx_6m
+tx_last_purchase = tx_6m.groupby('CustomerID').InvoiceDate.max().reset_index()
+tx_last_purchase.columns = ['CustomerID','MaxPurchaseDate']
+
+#merge two dataframes
+tx_purchase_dates = pd.merge(tx_last_purchase,tx_next_first_purchase,on='CustomerID',how='left')
+
+#calculate the time difference in days:
+tx_purchase_dates['NextPurchaseDay'] = (tx_purchase_dates['MinPurchaseDate'] - tx_purchase_dates['MaxPurchaseDate']).dt.days
+
+#merge with tx_user 
+tx_user = pd.merge(tx_user, tx_purchase_dates[['CustomerID','NextPurchaseDay']],on='CustomerID',how='left')
+
+#print tx_user
+tx_user.head()
+
+#fill NA values with 999
+tx_user = tx_user.fillna(999)
